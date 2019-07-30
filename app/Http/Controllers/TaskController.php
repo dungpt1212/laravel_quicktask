@@ -23,4 +23,12 @@ class TaskController extends Controller
         $task->name = $request->get('task');
         $task->save();
         return redirect()->back()->with('status', 'Thêm thành công');
+    }
+
+    public function deleteTask($id)
+    {
+        $task = Task::find($id);
+        $task->delete();
+        return redirect()->back()->with('status', 'Xóa thành công');
+    }
 }
