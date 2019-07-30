@@ -9,7 +9,6 @@ class TaskController extends Controller
 {
     public function index()
     {
-<<<<<<< HEAD
         $tasks = Task::all();
         return view('task', compact('tasks'));
     }
@@ -24,9 +23,4 @@ class TaskController extends Controller
         $task->name = $request->get('task');
         $task->save();
         return redirect()->back()->with('status', 'Thêm thành công');
-
-=======
-        return view('task');
->>>>>>> 133044b... them view tasks
-    }
 }
