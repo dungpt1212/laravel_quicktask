@@ -12,4 +12,6 @@
 */
 
 Route::get('/', 'TaskController@index');
+Route::post('/', 'TaskController@addTask')->name('add-task');
+
 
