@@ -34,7 +34,11 @@
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $task->name }}</td>
-                    <td><a href="{{ route('delete-task', ['id' => $task->id] ) }}" class="btn btn-danger">Delete</a></td>
+                    <form action="{{ route('delete-task') }}" method="post">
+                        @csrf
+                        <td><button type="submit" value="{{ $task->id }}" name="id" class="btn btn-danger">Delete</button></td>
+                    </form>
+
                 </tr>
                 @endforeach
             </tbody>
