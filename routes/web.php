@@ -13,6 +13,6 @@
 
 Route::get('/', 'TaskController@index');
 Route::post('/', 'TaskController@addTask')->name('add-task');
-Route::get('/delete-task/{id}', 'TaskController@deleteTask')->name('delete-task');
+Route::post('/delete-task', 'TaskController@deleteTask')->name('delete-task');
 
 
